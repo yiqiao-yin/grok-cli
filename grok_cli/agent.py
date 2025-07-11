@@ -40,7 +40,7 @@ class GrokAgent:
         try:
             response = self.agent_executor.invoke({"input": user_message})
             output = response.get("output", "Sorry, I couldn't generate a response.")
-            print(output)  
+            print("Bot: ", output)  
             return output
         except Exception as e:
             if "rate_limit" in str(e).lower() or "429" in str(e):
