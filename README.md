@@ -29,14 +29,34 @@ Supports intelligent tool use with 🎯 [Composio], integrated memory with 🧠 
     pip install -e .
     ```
 
-3. 🔐 Set your Composio API key:
+3. 🔐 Set your API key:
+
+   The repo is updated that *ComposIO* is not necessary. Only use it if you have tools from them.
 
    ```powershell
    # PowerShell
    $env:COMPOSIO_API_KEY = "your_composio_api_key"
    ```
 
+   ```powershell
+   # PowerShell
+   $env:XAI_API_KEY= "your_xai_api_key"
+   ```
+
+   ```bash
+   # Bash or Zsh (macOS Terminal)
+   export COMPOSIO_API_KEY="your_composio_api_key"
+   export XAI_API_KEY="your_xai_api_key"
+   ```
 4. ▶️ Run the CLI:
+
+   If you set up environment variable in previous step, you only need `grok_cli`:
+
+   ```bash
+   grok_cli
+   ```
+
+   If you have not set up environment variable in previous step, you can use the following:
 
    ```bash
    grok_cli --api-key YOUR_KEY
