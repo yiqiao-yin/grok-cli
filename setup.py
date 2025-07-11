@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('readme.md', encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='grok-cli',
     version='0.1.0',
@@ -19,6 +22,6 @@ setup(
     },
     author='Yiqiao Yin',
     description='A CLI tool for interacting with xAI Grok 4',
-    long_description=open('readme.md').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
 )

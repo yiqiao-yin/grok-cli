@@ -3,7 +3,7 @@ from langchain import hub
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from composio_langchain import ComposioToolSet, App
+# from composio_langchain import ComposioToolSet, App
 
 class GrokAgent:
     def __init__(self, api_key, model: str = "grok-4-0709", base_url: str = "https://api.x.ai/v1"):
@@ -14,8 +14,8 @@ class GrokAgent:
             temperature=0.7,
             max_tokens=1000
         )
-        self.composio_toolset = ComposioToolSet()
-        self.tools = self.composio_toolset.get_tools(apps=[App.FILETOOL])
+        # self.composio_toolset = ComposioToolSet()
+        self.tools = [] # self.composio_toolset.get_tools(apps=[App.FILETOOL])
         self.memory = ConversationBufferMemory(
             memory_key="chat_history",
             return_messages=True
